@@ -23,5 +23,18 @@ namespace DrugaRzecz
         {
             InitializeComponent();
         }
+
+        private void Oblicz_Click(object sender, RoutedEventArgs e)
+        {
+            if(int.TryParse(Liczba1.Text, out int a) && int.TryParse(Liczba2.Text, out int b))
+            {
+                int suma = a + b;
+                MessageBox.Show("Suma "+a+" i "+b+" wynosi "+suma.ToString(), "Wynik", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+            }
+            else{
+                MessageBox.Show("Musi być wypełniony formularz poprawnie","Uwaga",MessageBoxButton.OK, MessageBoxImage.Warning);
+                //To jest okno modalne ;o
+            }
+        }
     }
 }
