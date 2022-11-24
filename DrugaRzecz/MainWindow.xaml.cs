@@ -23,6 +23,14 @@ namespace DrugaRzecz
         public MainWindow()
         {
             InitializeComponent();
+            tekstBlok.Text = "Tekst generowany z C#";
+            tekstPudlo.Text = "Tekst TextBox wygenerowany z C#";
+        }
+
+        private void Przepisz_Click(object sender, RoutedEventArgs e)
+        {
+            string tekst = tekstPudlo.Text.ToString();
+            tekstBlok2.Text = tekst;
         }
     }
 }

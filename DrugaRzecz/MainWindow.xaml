@@ -7,12 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <TextBlock>
-            Text zapisany w TextBlock
+        
+        <TextBlock TextWrapping="Wrap" TextTrimming="CharacterEllipsis">
+            Text zapisany w <Bold>TextBlock</Bold>
+            Text zapisany w <Bold>TextBlock</Bold>
+            <LineBreak/>
+            Text zapisany w <Bold>TextBlock</Bold>
+            Text zapisany w <Bold>TextBlock</Bold>
         </TextBlock>
 
-        <TextBlock Text="Text inny w TextBlock">
-            
-        </TextBlock>
+        <TextBlock Text="Text zapisany w środku TextBlock"/>
+        
+        <TextBlock x:Name="tekstBlok"/>
+        
+        <Label Content="Jakis tekst w label"/>
+        
+        <Label Content="Jakis tekst w label za pomocą Bold" FontWeight="Bold"/>
+
+        <TextBox x:Name="tekstPudlo" AcceptsReturn="True" TextWrapping="WrapWithOverflow" Language="pl-pl" SpellCheck.IsEnabled="True"/>
+
+        <TextBlock x:Name="tekstBlok2"/>
+        <TextBlock x:Name="tekstBlok3"/>
+
+        <Button Click="Przepisz_Click">Przycisk</Button>
+        
+        <Button Content="Przycisk w content"/>
     </StackPanel>
 </Window>
