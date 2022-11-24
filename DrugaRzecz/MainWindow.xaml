@@ -27,10 +27,17 @@
         <TextBox x:Name="tekstPudlo" AcceptsReturn="True" TextWrapping="WrapWithOverflow" Language="pl-pl" SpellCheck.IsEnabled="True"/>
 
         <TextBlock x:Name="tekstBlok2"/>
-        <TextBlock x:Name="tekstBlok3"/>
+        <TextBlock x:Name="tekstBlok3" Text="{Binding ElementName=tekstPudlo, Path=Text}"/>
 
         <Button Click="Przepisz_Click">Przycisk</Button>
         
         <Button Content="Przycisk w content"/>
+
+        <Button HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Resources/jinxie.jpg" Width="20" Margin="5"></Image>
+                <TextBlock VerticalAlignment="Center" Margin="5">Zapisz</TextBlock>
+            </StackPanel>
+        </Button>
     </StackPanel>
 </Window>
